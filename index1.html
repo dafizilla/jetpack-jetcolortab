@@ -1,0 +1,45 @@
+<html>
+    <head>
+      <title>Jetpack ColorTab</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+      <link rel="jetpack" href="jetcolortab.js"/>
+
+<style>
+.boxer {
+background:#FF0000 none repeat scroll 0 0;
+height:30px;
+left:213px;
+position:absolute;
+top:13px;
+width:60px
+}
+</style>
+
+      <script>
+
+$(document).ready(function() {
+var colors = [
+  "color: rgb(0, 0, 0); background-color: rgb(246, 250, 125); border: 1px solid #000 !important;",
+  "color: #000; background-color:#FFCC99; border: 1px solid #000 !important",
+  "color: #000000; background-color: rgb(197, 212, 242); border: 1px solid #000 !important;",
+  "color: #000000; background-color: rgb(255, 220, 120); border: 1px solid #000 !important;",
+  "color: rgb(0, 0, 0); background-color: rgb(181, 233, 157); border: 1px solid #000 !important"];
+
+    var colorsContainer = $('#colorsContainer');
+	    for (var i = 0; i < colors.length; i++) {
+        colorsContainer.append($('<div style="position:absolute; width:16px; height:16px; left:' + (0 + i * 16) + 'px; ' + colors[i] + '"></div>'));
+	    }
+});      
+
+
+
+      </script>
+    </head>
+    <body>
+        <h3>Google Command Sounds</h3>
+        <div id="colorsContainer"></div>
+        <img  style="position: absolute; left: 120px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9kMCAwiHq0GoI4AAAFNSURBVDjLpZM9TgQxDIU/J54NU1DSchBusA13QALxd4m5BCAEEhISF6ChokBCHISWarea2XESit0Z/gYYhCsnsZ3n92zJOfMfE0CrqrpV9dOxtUTALN5VVbWtQOm9nx4cHv/p57PTkylQKrCWUgLg4vIKVb8CNmQZs8je7g6rnDXtouu6JoQJqorIcIGcM94bdV333WjnNU1LURR43yHIA3RlRISmaftbXZIiNG2DOEeMkZTzYL4TQZxbxq5Q9gjaZoGIcHy0/yN5p+eXtM2iP7vOMTMKLX5lv9ACM/vUAtCaEULg6vqGnNIgA+IcIQRas14n7V5jTIQwGTUDMaZe6Z6DFCOTybgCKcaPLYBgKeJVvx2ht1ECS7EfNoWlPE48ZVl+lY8hOT3unYx5Np8/PT7cb6WR2+REmM3nT0AWYB3YBDYAP3KXIvACPL8CauZ9gVDgEEEAAAAASUVORK5CYII="/>
+        <!--<a href="#" style="position: absolute; left: 120px">aa<a/>-->
+        <!--<div class="boxer"/>-->
+    </body>
+</html>
